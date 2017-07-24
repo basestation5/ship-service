@@ -32,13 +32,17 @@ public class ShipRepositoryImpl implements ShipRepository {
                 ship.setId(402);
                 ship.setName("TIE Interceptor 402");
                 ship.setDescription("TIE fighter, Dagger-shaped wings, four laser cannons");
+                ship.setCaptain("Mitch StarScreamer");
+                ship.setType("TIE Interceptor");
                 break;
 
             case 107 :
 
                 ship.setId(107);
-                ship.setName("TIE fighter 107");
+                ship.setName("TIE Fighter 107");
                 ship.setDescription("Twin ion engine (TIE), Fighter");
+                ship.setCaptain("Dan Astroidman");
+                ship.setType("TIE Fighter");
                 break;
 
             default:
