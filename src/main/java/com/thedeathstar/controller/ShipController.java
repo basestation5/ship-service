@@ -22,21 +22,10 @@ public ShipController(ShipRepository _shipRepository){
 private ShipRepository shipRepository;
 
     @RequestMapping(value = "/ships", method = RequestMethod.GET)
-    public ResponseEntity<List<Ship>> GetShips() {
+    public ResponseEntity<String> GetShips(){
 
-        List<Ship> ships = shipRepository.GetShips();
-
-       return new ResponseEntity<List<Ship>>(ships, HttpStatus.OK);
+       return new ResponseEntity<String>("deathstar2", HttpStatus.OK);
 
     }
-
-    @RequestMapping(value = "/ships/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Ship> GetShip(  @PathVariable("id") int id) {
-
-        return new ResponseEntity<Ship>(shipRepository.GetShip(id), HttpStatus.OK);
-
-    }
-
-
 }
 

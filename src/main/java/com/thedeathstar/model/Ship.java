@@ -1,8 +1,5 @@
 package com.thedeathstar.model;
 
-/**
- * Created by Jeremy on 7/23/17.
- */
 public class Ship {
 
     private int id;
@@ -14,7 +11,6 @@ public class Ship {
     private String captain;
 
     private String type;
-
 
     public String getCaptain() {
         return captain;
@@ -28,9 +24,7 @@ public class Ship {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
+    public void setType(String type) { this.type = type; }
 
     public String getDescription() { return description; }
 

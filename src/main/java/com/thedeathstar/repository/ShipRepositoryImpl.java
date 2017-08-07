@@ -5,52 +5,23 @@ import com.thedeathstar.model.Ship;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Jeremy on 7/23/17.
- */
 public class ShipRepositoryImpl implements ShipRepository {
 
     public List<Ship> GetShips(){
 
 
         List<Ship> shipArray = new ArrayList<Ship>();
+        Ship ship = new Ship();
 
-        shipArray.add(GetShip(402));
-        shipArray.add(GetShip(107));
+        ship.setId(402);
+        ship.setName("TIE Interceptor 402");
+        ship.setDescription("TIE fighter, Dagger-shaped wings, four laser cannons");
+        ship.setCaptain("Mitch StarScreamer");
+        ship.setType("TIE Interceptor");
+
+        shipArray.add(ship);
 
         return shipArray;
 
-    }
-
-    public Ship GetShip(int id){
-
-        Ship ship = new Ship();
-
-        switch(id){
-            case 402 :
-
-                ship.setId(402);
-                ship.setName("TIE Interceptor 402");
-                ship.setDescription("TIE fighter, Dagger-shaped wings, four laser cannons");
-                ship.setCaptain("Mitch StarScreamer");
-                ship.setType("TIE Interceptor");
-                break;
-
-            case 107 :
-
-                ship.setId(107);
-                ship.setName("TIE Fighter 107");
-                ship.setDescription("Twin ion engine (TIE), Fighter");
-                ship.setCaptain("Dan Astroidman");
-                ship.setType("TIE Fighter");
-                break;
-
-            default:
-
-                ship = null;
-                break;
-        }
-
-        return ship;
     }
 }
